@@ -19,7 +19,7 @@ TEST_F(SimpleConsoleGrid2DRendererTest, TestRenderWithInts){
     renderer.Render(&grid);
 
     std::string actual_output = testing::internal::GetCapturedStdout();
-    std::string expected_output = "1 0\n0 1\n";
+    std::string expected_output = "1  0\n0  1\n";
 
     EXPECT_EQ(expected_output, actual_output);
 }
@@ -38,7 +38,7 @@ TEST_F(SimpleConsoleGrid2DRendererTest, TestRenderWithCells){
     renderer.Render(&grid);
 
     std::string actual_output = testing::internal::GetCapturedStdout();
-    std::string expected_output =  "X 0\n0 X\n";
+    std::string expected_output =  "X  0\n0  X\n";
 
     EXPECT_EQ(expected_output, actual_output);
 }

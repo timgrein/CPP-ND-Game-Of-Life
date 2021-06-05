@@ -11,7 +11,7 @@ void SimpleConsoleGrid2DRenderer<T>::Render(Grid2D<T>* grid) const {
             std::cout << (*grid)(row, col);
             bool is_not_last_col = col != (grid->GetNumberOfCols() - 1);
             if(is_not_last_col){
-                std::cout << " ";
+                std::cout << "  ";
             }
         }
         std::cout << std::endl;
