@@ -8,7 +8,7 @@
 #include "Cell.h"
 #include "Grid2DRenderer.h"
 #include "SimpleConsoleGrid2DRenderer.h"
-#include "SimulationHooks.h"
+#include "DefaultSimulationHooks.h"
 #include "Utils.h"
 
 namespace GameOfLife {
@@ -26,13 +26,12 @@ namespace GameOfLife {
      */
     void Simulate(int grid_size,
                   int number_of_generations,
-                  const std::function<void(void)> &start_hook =
-                          []() -> void { SimulationHooks::StartHooks::CoutSimulationStarted(); },
-                  const std::function<void(int)> &simulation_loop_hook =
-                          [](int current_generation) -> void {SimulationHooks::LoopHooks::CoutCurrentGenerationInfo(current_generation);},
-                  const std::function<void(void)> &end_hook =
-                          []() -> void { SimulationHooks::EndHooks::CoutSimulationEnded(); },
-                  const std::function<Cell(void)> &initial_state_supplier = []() -> Cell {return Utils::GetRandomOneOrZero() == 0 ? Cell() : Cell(true);},
+                  const std::function<void(void)> &start_hook = []() -> void { DefaultSimulationHooks().StartHook(); },
+                  const std::function<void(int)> &loop_hook = [](int current_generation) -> void {DefaultSimulationHooks().LoopHook(current_generation);},
+                  const std::function<void(void)> &end_hook = []() -> void { DefaultSimulationHooks().EndHook(); },
+                  const std::function<Cell(void)> &initial_state_supplier = []() -> Cell {
+                      return Utils::GetRandomOneOrZero() == 0 ? Cell() : Cell(true);
+                  },
                   const Grid2DRenderer<Cell> &renderer = SimpleConsoleGrid2DRenderer<Cell>(),
                   std::chrono::milliseconds interval_between_generations = std::chrono::milliseconds(1000));
 }

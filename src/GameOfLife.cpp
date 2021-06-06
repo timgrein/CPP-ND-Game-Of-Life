@@ -78,7 +78,7 @@ bool GameOfLife::IsPopulationAlive(Grid2D<Cell> *current_state_grid) {
 
 void GameOfLife::Simulate(int grid_size, int number_of_generations,
                           const std::function<void(void)> &start_hook,
-                          const std::function<void(int)> &simulation_loop_hook,
+                          const std::function<void(int)> &loop_hook,
                           const std::function<void(void)> &end_hook,
                           const std::function<Cell(void)> &initial_state_supplier,
                           const Grid2DRenderer<Cell> &renderer,
@@ -89,7 +89,7 @@ void GameOfLife::Simulate(int grid_size, int number_of_generations,
     Grid2D<Cell> next_gen_grid(grid_size, grid_size);
 
     for (int gen = 0; gen < number_of_generations; gen++) {
-        simulation_loop_hook(gen);
+        loop_hook(gen);
 
         next_gen_grid = GetNextGenGrid(&initial_state_grid);
         renderer.Render(&next_gen_grid);

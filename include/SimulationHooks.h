@@ -1,21 +1,14 @@
 #ifndef GAMEOFLIFE_SIMULATIONHOOKS_H
 #define GAMEOFLIFE_SIMULATIONHOOKS_H
 
-namespace SimulationHooks {
+class SimulationHooks {
+public:
+    virtual void StartHook() const = 0;
 
-    namespace StartHooks {
-        void CoutSimulationStarted();
-    }
+    virtual void LoopHook(int current_generation) const = 0;
 
-    namespace LoopHooks {
-        void CoutCurrentGenerationInfo(int current_generation);
-    }
+    virtual void EndHook() const = 0;
 
-    namespace EndHooks {
-        void CoutSimulationEnded();
-    }
-
-
-}
+};
 
 #endif //GAMEOFLIFE_SIMULATIONHOOKS_H
