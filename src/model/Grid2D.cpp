@@ -5,10 +5,10 @@ template<typename T>
 Grid2D<T>::Grid2D(int rows, int columns) : _rows(rows), _columns(columns), _entries(rows * columns) {}
 
 template <typename T>
-Grid2D<T>::Grid2D(int rows, int columns, std::function<T(void)> random_generator) : Grid2D<T>(rows, columns){
+Grid2D<T>::Grid2D(int rows, int columns, std::function<T(void)> state_supplier) : Grid2D<T>(rows, columns){
     for(int row = 0; row < this->GetNumberOfRows(); row++){
         for(int col = 0; col < this->GetNumberOfCols(); col++){
-            (*this)(row, col) = random_generator();
+            (*this)(row, col) = state_supplier();
         }
     }
 }

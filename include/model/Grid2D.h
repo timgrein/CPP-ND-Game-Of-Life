@@ -9,8 +9,8 @@ class Grid2D {
 public:
     Grid2D(int rows, int columns);
 
-    // constructor with supplier function to be able to initialize a grid (f.e. with a random state)
-    Grid2D(int rows, int columns, std::function<T(void)> supplier);
+    // constructor with state_supplier function to be able to initialize a grid (f.e. with a random state)
+    Grid2D(int rows, int columns, std::function<T(void)> state_supplier);
 
     // move constructor
     Grid2D(Grid2D &&other);
