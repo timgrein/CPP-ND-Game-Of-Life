@@ -9,7 +9,7 @@
 #include "rendering/Grid2DRenderer.h"
 #include "rendering/SimpleConsoleGrid2DRenderer.h"
 #include "hooks/DefaultSimulationHooks.h"
-#include "utils/Utils.h"
+#include "supplier/RandomCellStateSupplier.h"
 
 namespace GameOfLife {
     Grid2D<Cell> GetNextGenGrid(Grid2D<Cell> *current_state_grid);
@@ -29,9 +29,7 @@ namespace GameOfLife {
                   const std::function<void(void)> &start_hook = []() -> void { DefaultSimulationHooks().StartHook(); },
                   const std::function<void(int)> &loop_hook = [](int current_generation) -> void {DefaultSimulationHooks().LoopHook(current_generation);},
                   const std::function<void(void)> &end_hook = []() -> void { DefaultSimulationHooks().EndHook(); },
-                  const std::function<Cell(void)> &initial_state_supplier = []() -> Cell {
-                      return Utils::GetRandomOneOrZero() == 0 ? Cell() : Cell(true);
-                  },
+                  const std::function<Cell(void)> &initial_state_supplier = []() -> Cell { return RandomCellStateSupplier().Get(); },
                   const Grid2DRenderer<Cell> &renderer = SimpleConsoleGrid2DRenderer<Cell>(),
                   std::chrono::milliseconds interval_between_generations = std::chrono::milliseconds(1000));
 }
