@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "Grid2D.h"
-#include "Cell.h"
-#include "GameOfLife.h"
+#include "model/Grid2D.h"
+#include "model/Cell.h"
+#include "algo/GameOfLife.h"
 
 // setup
 

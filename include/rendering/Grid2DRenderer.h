@@ -1,7 +1,7 @@
 #ifndef GAMEOFLIFE_GRIDRENDERER_H
 #define GAMEOFLIFE_GRIDRENDERER_H
 
-#include "Grid2D.h"
+#include "model/Grid2D.h"
 
 template <typename T>
 class Grid2DRenderer{

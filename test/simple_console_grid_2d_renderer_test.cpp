@@ -1,8 +1,8 @@
 #include <iostream>
-#include <Cell.h>
+#include <model/Cell.h>
 
 #include "gtest/gtest.h"
-#include "SimpleConsoleGrid2DRenderer.h"
+#include "rendering/SimpleConsoleGrid2DRenderer.h"
 
 
 class SimpleConsoleGrid2DRendererTest : public ::testing::Test{};

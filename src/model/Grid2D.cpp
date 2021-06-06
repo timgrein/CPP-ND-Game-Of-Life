@@ -1,5 +1,5 @@
-#include <Grid2D.h>
-#include <Cell.h>
+#include <model/Grid2D.h>
+#include <model/Cell.h>
 
 template<typename T>
 Grid2D<T>::Grid2D(int rows, int columns) : _rows(rows), _columns(columns), _entries(rows * columns) {}

@@ -1,4 +1,4 @@
-#include "Cell.h"
+#include "model/Cell.h"
 
 Cell::Cell() : _is_alive(false) {}
 

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <Utils.h>
+#include <utils/Utils.h>
 
 class UtilsTest : public ::testing::Test{};
 

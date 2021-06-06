@@ -1,8 +1,8 @@
 #include <string>
 #include <iostream>
-#include <Cell.h>
+#include <model/Cell.h>
 
-#include "SimpleConsoleGrid2DRenderer.h"
+#include "rendering/SimpleConsoleGrid2DRenderer.h"
 
 template<typename T>
 void SimpleConsoleGrid2DRenderer<T>::Render(Grid2D<T>* grid) const {

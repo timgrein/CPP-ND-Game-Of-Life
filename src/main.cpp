@@ -1,5 +1,5 @@
 #include <iostream>
-#include <GameOfLife.h>
+#include <algo/GameOfLife.h>
 
 int main() {
     int grid_size = 10;
@@ -14,7 +14,7 @@ int main() {
                              std::cout << "Custom start hook: started simulation" << std::endl;
                          },
                          [](int current_generation) -> void {
-                             std::cout << "Custom Loop hook: current generation #" << current_generation << std::endl;
+                             std::cout << "Custom Loop hook: current generation #" << (current_generation + 1) << std::endl;
                          },
                          []() -> void {
                              std::cout << "Custom end hook: ended simulation" << std::endl;

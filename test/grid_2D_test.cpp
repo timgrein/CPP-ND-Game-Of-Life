@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include <Grid2D.h>
+#include <model/Grid2D.h>
 
-#include "Utils.h"
+#include "utils/Utils.h"
 
 class Grid2DTest : public ::testing::Test {
 };

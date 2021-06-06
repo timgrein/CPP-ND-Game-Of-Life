@@ -7,13 +7,13 @@ set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 include_directories(include)
-file(GLOB SOURCES "src/*.cpp")
+file(GLOB SOURCES "src/*.cpp" "src/hooks/*.cpp" "src/model/*.cpp" "src/rendering/*.cpp" "src/utils/*.cpp" "src/algo/*.cpp")
 
 add_subdirectory(thirdparty/googletest)
-add_executable(test test/grid_2D_test.cpp src/Grid2D.cpp
-                    test/utils_test.cpp src/Utils.cpp
-                    test/simple_console_grid_2d_renderer_test.cpp src/SimpleConsoleGrid2DRenderer.cpp src/Cell.cpp
-                    test/game_of_life_test.cpp src/GameOfLife.cpp)
+add_executable(test test/grid_2D_test.cpp src/model/Grid2D.cpp
+                    test/utils_test.cpp src/utils/Utils.cpp
+                    test/simple_console_grid_2d_renderer_test.cpp src/rendering/SimpleConsoleGrid2DRenderer.cpp src/model/Cell.cpp
+                    test/game_of_life_test.cpp src/algo/GameOfLife.cpp)
 target_link_libraries(test gtest_main)
 
 

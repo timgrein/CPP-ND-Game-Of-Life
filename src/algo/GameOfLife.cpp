@@ -1,5 +1,5 @@
-#include "GameOfLife.h"
-#include "Utils.h"
+#include "algo/GameOfLife.h"
+#include "utils/Utils.h"
 
 Grid2D<Cell> GameOfLife::GetNextGenGrid(Grid2D<Cell> *current_state_grid) {
     Grid2D<Cell> next_gen_grid(current_state_grid->GetNumberOfRows(), current_state_grid->GetNumberOfCols());

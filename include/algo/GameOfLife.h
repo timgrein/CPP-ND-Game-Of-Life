@@ -4,12 +4,12 @@
 #include <thread>
 #include <functional>
 
-#include "Grid2D.h"
-#include "Cell.h"
-#include "Grid2DRenderer.h"
-#include "SimpleConsoleGrid2DRenderer.h"
-#include "DefaultSimulationHooks.h"
-#include "Utils.h"
+#include "model/Grid2D.h"
+#include "model/Cell.h"
+#include "rendering/Grid2DRenderer.h"
+#include "rendering/SimpleConsoleGrid2DRenderer.h"
+#include "hooks/DefaultSimulationHooks.h"
+#include "utils/Utils.h"
 
 namespace GameOfLife {
     Grid2D<Cell> GetNextGenGrid(Grid2D<Cell> *current_state_grid);
