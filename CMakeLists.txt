@@ -7,7 +7,7 @@ set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 include_directories(include)
-file(GLOB SOURCES "src/*.cpp" "src/hooks/*.cpp" "src/model/*.cpp" "src/rendering/*.cpp" "src/utils/*.cpp" "src/algo/*.cpp")
+file(GLOB SOURCES "src/*.cpp" "src/hooks/*.cpp" "src/model/*.cpp" "src/rendering/*.cpp" "src/utils/*.cpp" "src/algo/*.cpp" "src/supplier/*.cpp")
 
 add_subdirectory(thirdparty/googletest)
 add_executable(test test/grid_2D_test.cpp src/model/Grid2D.cpp
