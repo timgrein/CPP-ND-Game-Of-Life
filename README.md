@@ -1,10 +1,23 @@
 # CPPND: Capstone Hello World Repo
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
+This the implementation for the capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+This project is an implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) providing several abstract classes to be able to extend the functionality easily. 
 
-In this project, you can build your own C++ application starting with this repo, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+Structure (respectively most important classes of the project):
+- `Grid2D` provides a generic two-dimensional grid, which is able to represent f.e. a grid of `Cells`
+- `Grid2DRenderer` is an abstract class providing a single render method to be able to add custom renderers to the project (f.e. by using opencv)
+- `Cell` is a representation of a biological cell (can be alive or dead)
+- `GameOfLife` implements the cellular automaton by providing parameters (with convenient defaults) for customizing the simulation:
+  - hooks:
+    - Start hook at the beginning
+    - Loop hook for every generation
+    - End Hook at the end
+  - initial state supplier
+  - renderer
+  - time between the generations
+  
+The `main` file contains several examples of customized simulations.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -23,4 +36,16 @@ In this project, you can build your own C++ application starting with this repo,
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./HelloWorld`.
+4. Run it: `./GameOfLife`.
+
+## Rubric points
+- [x] README
+- [x] control structures
+- [x] uses Object Oriented Programming techniques
+- [x] usage of access specifiers
+- [x] member initialization lists
+- [x] inheritance
+- [x] derived functions override virtual base class functions
+- [x] templates generalizing functions in the project
+- [x] usage of references
+- [x] usage of smart pointers (f.e. in the tests)
