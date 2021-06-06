@@ -9,13 +9,13 @@ Structure (respectively most important classes of the project):
 - `Grid2DRenderer` is an abstract class providing a single render method to be able to add custom renderers to the project (f.e. by using opencv)
 - `Cell` is a representation of a biological cell (can be alive or dead)
 - `GameOfLife` implements the cellular automaton by providing parameters (with convenient defaults) for customizing the simulation:
-  - hooks:
+  - Hooks:
     - Start hook at the beginning
     - Loop hook for every generation
     - End Hook at the end
-  - initial state supplier
-  - renderer
-  - time between the generations
+  - Initial state supplier
+  - Renderer
+  - Time between the generations
   
 The `main` file contains several examples of customized simulations.
 
