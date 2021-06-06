@@ -3,11 +3,11 @@
 #include <iostream>
 
 void DefaultSimulationHooks::StartHook() const {
-    std::cout << "Started simulation" << std::endl;
+    std::cout << "Started simulation. Initial state:" << std::endl;
 }
 
 void DefaultSimulationHooks::LoopHook(int current_generation) const {
-    std::cout << "Current generation #" << (current_generation + 1) << std::endl;
+    std::cout << "Current generation #:" << (current_generation + 1) << std::endl;
 }
 
 void DefaultSimulationHooks::EndHook() const {
