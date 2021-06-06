@@ -40,12 +40,12 @@ The `main` file contains several examples of customized simulations.
 
 ## Rubric points
 - [x] README
-- [x] control structures
-- [x] uses Object Oriented Programming techniques
-- [x] usage of access specifiers
-- [x] member initialization lists
-- [x] inheritance
-- [x] derived functions override virtual base class functions
-- [x] templates generalizing functions in the project
-- [x] usage of references
-- [x] usage of smart pointers (f.e. in the tests)
+- [x] Control structures
+- [x] Uses Object Oriented Programming techniques
+- [x] Usage of access specifiers
+- [x] Member initialization lists
+- [x] Inheritance
+- [x] Derived functions override virtual base class functions
+- [x] Templates generalizing functions in the project
+- [x] Usage of references
+- [x] Usage of smart pointers (f.e. in the tests)
