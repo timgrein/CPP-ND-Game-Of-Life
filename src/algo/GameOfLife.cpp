@@ -86,6 +86,8 @@ void GameOfLife::Simulate(int grid_size, int number_of_generations,
     start_hook();
 
     Grid2D<Cell> initial_state_grid(grid_size, grid_size, [initial_state_supplier]() -> Cell{ return initial_state_supplier();});
+    renderer.Render(&initial_state_grid);
+
     Grid2D<Cell> next_gen_grid(grid_size, grid_size);
 
     for (int gen = 0; gen < number_of_generations; gen++) {
