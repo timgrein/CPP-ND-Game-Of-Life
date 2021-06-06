@@ -3,12 +3,12 @@
 
 int main() {
     int grid_size = 10;
-    int number_of_generations = 10;
+    int number_of_generations = 5;
 
-    // default
+    // default example
     GameOfLife::Simulate(grid_size, number_of_generations);
 
-    // custom hooks
+    // custom hooks example
     GameOfLife::Simulate(grid_size, number_of_generations,
                          []() -> void {
                              std::cout << "Custom start hook: started simulation" << std::endl;
@@ -19,6 +19,8 @@ int main() {
                          []() -> void {
                              std::cout << "Custom end hook: ended simulation" << std::endl;
                          });
+
+
 
 
 
