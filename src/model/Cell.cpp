@@ -8,7 +8,6 @@ bool Cell::IsAlive() const {
     return _is_alive;
 }
 
-// 😁 || 💀
 Cell::operator std::string() const {
     return Cell::IsAlive() ? "X" : "0";
 }
