@@ -38,7 +38,6 @@ template<typename T>
 Grid2D<T>::Grid2D(Grid2D &&other) : _entries(std::move(other._entries)) {
 }
 
-
 // move assignment operator
 template<typename T>
 Grid2D<T> &Grid2D<T>::operator=(Grid2D &&other) {
